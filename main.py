@@ -5,6 +5,9 @@ from tkinter import Tk, simpledialog
 from tkinter.filedialog import askopenfilename, askdirectory
 
 def read_file(file_path: str) -> None:
+    if not file_path or file_path == '':
+        exit()
+
     for i in range(40):
         os.system('cls' if os.name == 'nt' else 'clear')
         print(f"\033[93mReading file: \"{os.path.basename(file_path)}\"\n\033[0m")
